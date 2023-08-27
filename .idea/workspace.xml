@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="becf3a93-1681-4375-8f07-13c90e374a68" name="Changes" comment="hm_6">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/e/1e9075f5bf079c01ef2c910709e91a497d262080" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/e/1e9075f5bf079c01ef2c910709e91a497d262080" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/c/4c59b7422a220bd3d9ab25e1626a80f7dd1d866f" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/c/4c59b7422a220bd3d9ab25e1626a80f7dd1d866f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/9/f918c40649ef7257e01beadc76cc68cbae28ac5c" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/9/f918c40649ef7257e01beadc76cc68cbae28ac5c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/e/1e9075f5bf079c01ef2c910709e91a497d262080" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/e/1e9075f5bf079c01ef2c910709e91a497d262080" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/c/4c59b7422a220bd3d9ab25e1626a80f7dd1d866f" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/c/4c59b7422a220bd3d9ab25e1626a80f7dd1d866f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/9/f918c40649ef7257e01beadc76cc68cbae28ac5c" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/9/f918c40649ef7257e01beadc76cc68cbae28ac5c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hm_3/clean_folder.py" beforeDir="false" afterPath="$PROJECT_DIR$/hm_3/clean_folder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hm_3/factorize.py" beforeDir="false" afterPath="$PROJECT_DIR$/hm_3/factorize.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hm_5/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/hm_5/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hm_6/connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/hm_6/connection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hm_6/create_tables.py" beforeDir="false" afterPath="$PROJECT_DIR$/hm_6/create_tables.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hm_6/hm_6.db" beforeDir="false" afterPath="$PROJECT_DIR$/hm_6/hm_6.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hm_6/queries/query_1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/hm_6/queries/query_1.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hm_6/queries/query_10.sql" beforeDir="false" afterPath="$PROJECT_DIR$/hm_6/queries/query_10.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hm_6/queries/query_11.sql" beforeDir="false" afterPath="$PROJECT_DIR$/hm_6/queries/query_11.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hm_6/queries/query_12.sql" beforeDir="false" afterPath="$PROJECT_DIR$/hm_6/queries/query_12.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hm_6/queries/query_2.sql" beforeDir="false" afterPath="$PROJECT_DIR$/hm_6/queries/query_2.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hm_6/queries/query_3.sql" beforeDir="false" afterPath="$PROJECT_DIR$/hm_6/queries/query_3.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hm_6/queries/query_4.sql" beforeDir="false" afterPath="$PROJECT_DIR$/hm_6/queries/query_4.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hm_6/queries/query_5.sql" beforeDir="false" afterPath="$PROJECT_DIR$/hm_6/queries/query_5.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hm_6/queries/query_6.sql" beforeDir="false" afterPath="$PROJECT_DIR$/hm_6/queries/query_6.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hm_6/queries/query_7.sql" beforeDir="false" afterPath="$PROJECT_DIR$/hm_6/queries/query_7.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hm_6/queries/query_8.sql" beforeDir="false" afterPath="$PROJECT_DIR$/hm_6/queries/query_8.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hm_6/queries/query_9.sql" beforeDir="false" afterPath="$PROJECT_DIR$/hm_6/queries/query_9.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hm_6/seeds.py" beforeDir="false" afterPath="$PROJECT_DIR$/hm_6/seeds.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hm_6/tables_query.py" beforeDir="false" afterPath="$PROJECT_DIR$/hm_6/tables_query.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Yar-Mel&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="d7a31955-04d9-4d17-8fc9-7963be7e47a2" />
+        <option name="url" value="https://github.com/Yar-Mel/PYTHON_WEB.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2Svmm2IKj9Vb1eyne3WnqokMD8z" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/mnt/Data/dev/git/PYTHON_WEB&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.json.schema&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/hm_6/queries" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/hm_4/resources" />
+      <recent name="$PROJECT_DIR$/hm_4/css" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="becf3a93-1681-4375-8f07-13c90e374a68" name="Changes" comment="" />
+      <created>1690035585240</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1690035585240</updated>
+    </task>
+    <task id="LOCAL-00001" summary="1.0.0">
+      <option name="closed" value="true" />
+      <created>1690036121232</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1690036121232</updated>
+    </task>
+    <task id="LOCAL-00002" summary="1.0.0">
+      <option name="closed" value="true" />
+      <created>1690036264857</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1690036264857</updated>
+    </task>
+    <task id="LOCAL-00003" summary="hm_6">
+      <option name="closed" value="true" />
+      <created>1691095972812</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1691095972812</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1.0.0" />
+    <MESSAGE value="hm_6" />
+    <option name="LAST_COMMIT_MESSAGE" value="hm_6" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/hm_3/factorize.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
