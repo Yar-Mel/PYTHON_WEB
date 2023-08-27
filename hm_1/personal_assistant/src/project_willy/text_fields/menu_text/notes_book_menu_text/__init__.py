@@ -1,0 +1,5 @@
+
+from text_fields.menu_text.notes_book_menu_text.notes_menu_main_text import NotesMenuText
+from text_fields.menu_text.notes_book_menu_text.notes_menu_add_text import AddNotesMenuText
+from text_fields.menu_text.notes_book_menu_text.notes_menu_change_text import ChangeNotesMenuText
+from text_fields.menu_text.notes_book_menu_text.notes_menu_show_text import ShowNotesMenuText
