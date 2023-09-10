@@ -47,9 +47,9 @@ class QuotesPipeline:
         return "Process success"
 
     def close_spider(self, spider):
-        with open("quotes.json", "w", encoding="UTF-8") as fd:
+        with open("json/quotes.json", "w", encoding="UTF-8") as fd:
             json.dump(self.quotes, fd, ensure_ascii=False)
-        with open("authors.json", "w", encoding="UTF-8") as fd:
+        with open("json/authors.json", "w", encoding="UTF-8") as fd:
             json.dump(self.authors, fd, ensure_ascii=False)
 
 
