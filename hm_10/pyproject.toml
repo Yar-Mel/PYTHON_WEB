@@ -7,6 +7,11 @@ authors = ["Yaroslav Melnychuk <yarmel.dev@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.10"
 Django = "^4.2.4"
+Scrapy = "^2.10.1"
+pymongo = "^4.5.0"
+mongoengine = "^0.27.0"
+colorama = "^0.4.6"
+psycopg2-binary = "^2.9.7"
 
 [tool.poetry.dev-dependencies]
 
