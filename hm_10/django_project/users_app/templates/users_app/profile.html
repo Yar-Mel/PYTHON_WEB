@@ -1,0 +1,40 @@
+{% extends "quotes_app/base.html" %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>Add New Author</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form_author.as_p }}
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+        </form>
+    </div>
+    <div class="col-md-6">
+    <h2>Add New Quote</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                 <label>{{ form_quote.author.label_tag }}</label>
+                <select name="{{ form_quote.author.name }}">
+                    <option value=""></option>
+                    {% for author in form_quote.author.field.queryset %}
+                    <option value="{{ author.id }}">{{ author.fullname }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label>{{ form_quote.quote.label_tag }}</label>
+                {{ form_quote.quote }}
+            </div>
+            <div class="form-group">
+                 <label> {{ form_quote.tags.label_tag }}</label>
+                {{ form_quote.tags }}
+            </div>
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

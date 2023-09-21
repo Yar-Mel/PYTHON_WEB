@@ -1,0 +1,15 @@
+{% extends "quotes_app/base.html" %}
+
+{% block content %}
+
+<h3>Viewing tag: <a href="{% url 'quotes_app:tag' tag %}">{{ tag }}</a></h3>
+<div class="row">
+    <div class="col-md-8">
+        {% include 'quotes_app/quotes.html' %}
+    </div>
+    <div class="col-md-4 tags-box">
+        {% include 'quotes_app/top_tags.html' %}
+    </div>
+</div>
+
+{% endblock %}

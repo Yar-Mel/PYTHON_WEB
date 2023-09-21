@@ -1,0 +1,28 @@
+<nav>
+    <ul class="pager">
+        <li class="previous">
+            {% if content.has_previous %}
+            <a href="
+                {% if tag %}
+                {% url 'quotes_app:tag' tag content.previous_page_number %}
+                {% else %}
+                {% url 'quotes_app:main' content.previous_page_number %}
+                {% endif %}">
+                <span aria-hidden="true">←</span> Previous
+            </a>
+            {% endif %}
+        </li>
+        <li class="next">
+            {% if content.has_next %}
+            <a href="
+                {% if tag %}
+                {% url 'quotes_app:tag' tag content.next_page_number %}
+                {% else %}
+                {% url 'quotes_app:main' content.next_page_number %}
+                {% endif %}">
+                Next <span aria-hidden="true">→</span>
+            </a>
+            {% endif %}
+        </li>
+    </ul>
+</nav>
