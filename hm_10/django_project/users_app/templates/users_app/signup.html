@@ -7,16 +7,30 @@
 		{% csrf_token %}
 		<div class="row">
 			<div class="form-group col-xs-3">
+				<label>Email</label>
+				{{ form.email }}
+				<span>{{ form.errors.email }}</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-xs-3">
 				<label>Username</label>
 				{{ form.username }}
-				<span>{{form.errors.username}}</span>
+				<span>{{ form.errors.username }}</span>
 			</div>
 		</div>
 		<div class="row">
 			<div class="form-group col-xs-3">
 				<label>Password</label>
 				{{ form.password1 }}
-				<span>{{form.errors.password}}</span>
+				<span>{{ form.errors.password1 }}</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-xs-3">
+				<label>Confirm Password</label>
+				{{ form.password2 }}
+				<span>{{ form.errors.password2 }}</span>
 			</div>
 		</div>
 		<button type="submit" class="btn btn-success">SignUp</button>

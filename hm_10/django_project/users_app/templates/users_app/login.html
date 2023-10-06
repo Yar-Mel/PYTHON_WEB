@@ -9,14 +9,19 @@
 			<div class="form-group col-xs-3">
 				<label>Username</label>
 				{{ form.username }}
-				<span>{{form.errors.username}}</span>
+				<span>{{ form.errors.username }}</span>
 			</div>
 		</div>
 		<div class="row">
 			<div class="form-group col-xs-3">
 				<label>Password</label>
 				{{ form.password }}
-				<span>{{form.errors.password}}</span>
+				<span>{{ form.errors.password }}</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-xs-3">
+				<a href="{% url 'users_app:password_reset' %}" class="text-center"><i>Forgot Password?</i></a>
 			</div>
 		</div>
 		<button type="submit" class="btn btn-primary">Login</button>
