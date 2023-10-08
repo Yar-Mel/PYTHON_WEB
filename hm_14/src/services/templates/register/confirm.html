@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Confirmation</title>
+</head>
+<body>
+    <p>{{ username }}, please confirm your email address</p>
+    <a href="{{host}}api/auth/confirmed-email/{{token}}">
+        <button>Confirm email address</button>
+    </a>
+</body>
+</html>
+

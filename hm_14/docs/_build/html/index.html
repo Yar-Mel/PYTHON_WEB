@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Welcome to Rest API’s documentation! &#8212; Rest API&#39;s  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css?v=601dbdee" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">Rest API&#39;s  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Welcome to Rest API’s documentation!</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="welcome-to-rest-api-s-documentation">
+<h1>Welcome to Rest API’s documentation!<a class="headerlink" href="#welcome-to-rest-api-s-documentation" title="Link to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="module-main">
+<span id="rest-api-s-main"></span><h1>Rest API’s main<a class="headerlink" href="#module-main" title="Link to this heading">¶</a></h1>
+<p>FastAPI Application Configuration</p>
+<p>This module configures a FastAPI application with routes, middleware, and event handlers.</p>
+</section>
+<section id="module-src.repository.contacts">
+<span id="rest-api-s-repository-contacts"></span><h1>Rest API’s repository Contacts<a class="headerlink" href="#module-src.repository.contacts" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.repository.contacts.create_contact">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.contacts.</span></span><span class="sig-name descname"><span class="pre">create_contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contact</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ContactRequest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Contact</span></span></span><a class="headerlink" href="#src.repository.contacts.create_contact" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Create a new contact for the current user.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param contact<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The contact data to create.</p>
+</dd>
+<dt class="field-even">type contact<span class="colon">:</span></dt>
+<dd class="field-even"><p>ContactRequest</p>
+</dd>
+<dt class="field-odd">param db<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The database session.</p>
+</dd>
+<dt class="field-even">type db<span class="colon">:</span></dt>
+<dd class="field-even"><p>Session</p>
+</dd>
+<dt class="field-odd">param current_user<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current user.</p>
+</dd>
+<dt class="field-even">type current_user<span class="colon">:</span></dt>
+<dd class="field-even"><p>User</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The created contact.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>Contact</p>
+</dd>
+<dt class="field-odd">raises HTTPException 400<span class="colon">:</span></dt>
+<dd class="field-odd"><p>If the phone number already exists for the current user.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.repository.contacts.delete_contact">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.contacts.</span></span><span class="sig-name descname"><span class="pre">delete_contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contact_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">Contact</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.repository.contacts.delete_contact" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Delete a specific contact for the current user by ID.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param contact_id<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The ID of the contact to delete.</p>
+</dd>
+<dt class="field-even">type contact_id<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">param db<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The database session.</p>
+</dd>
+<dt class="field-even">type db<span class="colon">:</span></dt>
+<dd class="field-even"><p>Session</p>
+</dd>
+<dt class="field-odd">param current_user<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current user.</p>
+</dd>
+<dt class="field-even">type current_user<span class="colon">:</span></dt>
+<dd class="field-even"><p>User</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The deleted contact.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>Contact</p>
+</dd>
+<dt class="field-odd">raises HTTPException 404<span class="colon">:</span></dt>
+<dd class="field-odd"><p>If the contact is not found.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.repository.contacts.get_contact">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.contacts.</span></span><span class="sig-name descname"><span class="pre">get_contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contact_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">Contact</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.repository.contacts.get_contact" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Retrieve a contact by its ID for the given user.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param contact_id<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The ID of the contact to retrieve.</p>
+</dd>
+<dt class="field-even">type contact_id<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">param db<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The SQLAlchemy database session to use for the query.</p>
+</dd>
+<dt class="field-even">type db<span class="colon">:</span></dt>
+<dd class="field-even"><p>Session</p>
+</dd>
+<dt class="field-odd">param current_user<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The authenticated user for whom the contact is being retrieved.</p>
+</dd>
+<dt class="field-even">type current_user<span class="colon">:</span></dt>
+<dd class="field-even"><p>User</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The Contact object corresponding to the given <cite>contact_id</cite> if found.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>Type[Contact]</p>
+</dd>
+<dt class="field-odd">raises HTTPException 404<span class="colon">:</span></dt>
+<dd class="field-odd"><p>If the contact is not found.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.repository.contacts.get_contacts">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.contacts.</span></span><span class="sig-name descname"><span class="pre">get_contacts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">Contact</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.repository.contacts.get_contacts" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Get a list of contacts for the current user with pagination.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param skip<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The number of contacts to skip.</p>
+</dd>
+<dt class="field-even">type skip<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">param limit<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The maximum number of contacts to return.</p>
+</dd>
+<dt class="field-even">type limit<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">param db<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The database session.</p>
+</dd>
+<dt class="field-even">type db<span class="colon">:</span></dt>
+<dd class="field-even"><p>Session</p>
+</dd>
+<dt class="field-odd">param current_user<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current user.</p>
+</dd>
+<dt class="field-even">type current_user<span class="colon">:</span></dt>
+<dd class="field-even"><p>User</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of contacts.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>List[Contact]</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.repository.contacts.search_contacts">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.contacts.</span></span><span class="sig-name descname"><span class="pre">search_contacts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">Contact</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.repository.contacts.search_contacts" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Search for contacts by query string with pagination.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param q<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The search query.</p>
+</dd>
+<dt class="field-even">type q<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">param skip<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The number of contacts to skip.</p>
+</dd>
+<dt class="field-even">type skip<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">param limit<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The maximum number of contacts to return.</p>
+</dd>
+<dt class="field-even">type limit<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">param db<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The database session.</p>
+</dd>
+<dt class="field-even">type db<span class="colon">:</span></dt>
+<dd class="field-even"><p>Session</p>
+</dd>
+<dt class="field-odd">param current_user<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current user.</p>
+</dd>
+<dt class="field-even">type current_user<span class="colon">:</span></dt>
+<dd class="field-even"><p>User</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of contacts matching the query.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>List[Contact]</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.repository.contacts.upcoming_birthdays">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.contacts.</span></span><span class="sig-name descname"><span class="pre">upcoming_birthdays</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">Contact</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.repository.contacts.upcoming_birthdays" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Get a list of upcoming birthdays for the current user within the next 7 days.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param db<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The database session.</p>
+</dd>
+<dt class="field-even">type db<span class="colon">:</span></dt>
+<dd class="field-even"><p>Session</p>
+</dd>
+<dt class="field-odd">param current_user<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current user.</p>
+</dd>
+<dt class="field-even">type current_user<span class="colon">:</span></dt>
+<dd class="field-even"><p>User</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of contacts with upcoming birthdays.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>List[Contact]</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.repository.contacts.update_contact">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.contacts.</span></span><span class="sig-name descname"><span class="pre">update_contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contact_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">updated_contact</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ContactRequest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">Contact</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.repository.contacts.update_contact" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Update a specific contact for the current user by ID.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param contact_id<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The ID of the contact to update.</p>
+</dd>
+<dt class="field-even">type contact_id<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">param updated_contact<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The updated contact data.</p>
+</dd>
+<dt class="field-even">type updated_contact<span class="colon">:</span></dt>
+<dd class="field-even"><p>ContactRequest</p>
+</dd>
+<dt class="field-odd">param db<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The database session.</p>
+</dd>
+<dt class="field-even">type db<span class="colon">:</span></dt>
+<dd class="field-even"><p>Session</p>
+</dd>
+<dt class="field-odd">param current_user<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current user.</p>
+</dd>
+<dt class="field-even">type current_user<span class="colon">:</span></dt>
+<dd class="field-even"><p>User</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The updated contact.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>Contact</p>
+</dd>
+<dt class="field-odd">raises HTTPException 404<span class="colon">:</span></dt>
+<dd class="field-odd"><p>If the contact is not found.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-src.repository.users">
+<span id="rest-api-s-repository-users"></span><h1>Rest API’s repository Users<a class="headerlink" href="#module-src.repository.users" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.repository.users.confirmed_email">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.users.</span></span><span class="sig-name descname"><span class="pre">confirmed_email</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.repository.users.confirmed_email" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Confirm a user’s email address.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param email<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The email address to confirm.</p>
+</dd>
+<dt class="field-even">type email<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">param db<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The database session.</p>
+</dd>
+<dt class="field-even">type db<span class="colon">:</span></dt>
+<dd class="field-even"><p>Session</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.repository.users.create_user">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.users.</span></span><span class="sig-name descname"><span class="pre">create_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">UserModel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">User</span></span></span><a class="headerlink" href="#src.repository.users.create_user" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Create a new user with the provided user data.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param body<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The user data to create.</p>
+</dd>
+<dt class="field-even">type body<span class="colon">:</span></dt>
+<dd class="field-even"><p>UserModel</p>
+</dd>
+<dt class="field-odd">param db<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The database session.</p>
+</dd>
+<dt class="field-even">type db<span class="colon">:</span></dt>
+<dd class="field-even"><p>Session</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The newly created user.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>User</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.repository.users.get_user_by_email">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.users.</span></span><span class="sig-name descname"><span class="pre">get_user_by_email</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">User</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#src.repository.users.get_user_by_email" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Retrieve a user by their email address.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param email<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The email address of the user to retrieve.</p>
+</dd>
+<dt class="field-even">type email<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">param db<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The database session.</p>
+</dd>
+<dt class="field-even">type db<span class="colon">:</span></dt>
+<dd class="field-even"><p>Session</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The user with the specified email address.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>User</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.repository.users.set_new_password">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.users.</span></span><span class="sig-name descname"><span class="pre">set_new_password</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.repository.users.set_new_password" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Set a new password for a user.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param email<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The email address of the user whose password is to be updated.</p>
+</dd>
+<dt class="field-even">type email<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">param new_password<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The new password.</p>
+</dd>
+<dt class="field-even">type new_password<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">param db<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The database session.</p>
+</dd>
+<dt class="field-even">type db<span class="colon">:</span></dt>
+<dd class="field-even"><p>Session</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The user with the updated password.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>User</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.repository.users.update_avatar">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.users.</span></span><span class="sig-name descname"><span class="pre">update_avatar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">User</span></span></span><a class="headerlink" href="#src.repository.users.update_avatar" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Update the avatar URL for a user.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param email<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The email address of the user whose avatar is to be updated.</p>
+</dd>
+<dt class="field-even">type email<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">param url<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The new avatar URL.</p>
+</dd>
+<dt class="field-even">type url<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">param db<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The database session.</p>
+</dd>
+<dt class="field-even">type db<span class="colon">:</span></dt>
+<dd class="field-even"><p>Session</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The user with the updated avatar URL.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>User</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.repository.users.update_token">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.users.</span></span><span class="sig-name descname"><span class="pre">update_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.repository.users.update_token" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Update the refresh token for a user.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param user<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The user whose token is to be updated.</p>
+</dd>
+<dt class="field-even">type user<span class="colon">:</span></dt>
+<dd class="field-even"><p>User</p>
+</dd>
+<dt class="field-odd">param token<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The new refresh token or None.</p>
+</dd>
+<dt class="field-even">type token<span class="colon">:</span></dt>
+<dd class="field-even"><p>str | None</p>
+</dd>
+<dt class="field-odd">param db<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The database session.</p>
+</dd>
+<dt class="field-even">type db<span class="colon">:</span></dt>
+<dd class="field-even"><p>Session</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-src.routes.contacts">
+<span id="rest-api-s-routes-contacts"></span><h1>Rest API’s routes Contacts<a class="headerlink" href="#module-src.routes.contacts" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.routes.contacts.create_contact">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.routes.contacts.</span></span><span class="sig-name descname"><span class="pre">create_contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contact</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ContactRequest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_current_user)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.routes.contacts.create_contact" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Create a new contact.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param contact<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The contact data to create.</p>
+</dd>
+<dt class="field-even">type contact<span class="colon">:</span></dt>
+<dd class="field-even"><p>ContactRequest</p>
+</dd>
+<dt class="field-odd">param db<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The database session.</p>
+</dd>
+<dt class="field-even">type db<span class="colon">:</span></dt>
+<dd class="field-even"><p>Session</p>
+</dd>
+<dt class="field-odd">param current_user<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current user.</p>
+</dd>
+<dt class="field-even">type current_user<span class="colon">:</span></dt>
+<dd class="field-even"><p>User</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The newly created contact.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>ContactResponse</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.routes.contacts.delete_contact">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.routes.contacts.</span></span><span class="sig-name descname"><span class="pre">delete_contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contact_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_current_user)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.routes.contacts.delete_contact" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Delete a contact by its ID.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param contact_id<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The ID of the contact to delete.</p>
+</dd>
+<dt class="field-even">type contact_id<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">param db<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The database session.</p>
+</dd>
+<dt class="field-even">type db<span class="colon">:</span></dt>
+<dd class="field-even"><p>Session</p>
+</dd>
+<dt class="field-odd">param current_user<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current user.</p>
+</dd>
+<dt class="field-even">type current_user<span class="colon">:</span></dt>
+<dd class="field-even"><p>User</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The deleted contact.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>ContactResponse</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.routes.contacts.get_contact">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.routes.contacts.</span></span><span class="sig-name descname"><span class="pre">get_contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contact_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_current_user)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.routes.contacts.get_contact" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Retrieve a contact by its ID.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param contact_id<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The ID of the contact to retrieve.</p>
+</dd>
+<dt class="field-even">type contact_id<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">param db<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The database session.</p>
+</dd>
+<dt class="field-even">type db<span class="colon">:</span></dt>
+<dd class="field-even"><p>Session</p>
+</dd>
+<dt class="field-odd">param current_user<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current user.</p>
+</dd>
+<dt class="field-even">type current_user<span class="colon">:</span></dt>
+<dd class="field-even"><p>User</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The retrieved contact.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>ContactResponse</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.routes.contacts.get_contacts">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.routes.contacts.</span></span><span class="sig-name descname"><span class="pre">get_contacts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_current_user)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.routes.contacts.get_contacts" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Retrieve a list of contacts with specified pagination parameters.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param skip<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The number of contacts to skip.</p>
+</dd>
+<dt class="field-even">type skip<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">param limit<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The maximum number of contacts to return.</p>
+</dd>
+<dt class="field-even">type limit<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">param db<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The database session.</p>
+</dd>
+<dt class="field-even">type db<span class="colon">:</span></dt>
+<dd class="field-even"><p>Session</p>
+</dd>
+<dt class="field-odd">param current_user<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current user.</p>
+</dd>
+<dt class="field-even">type current_user<span class="colon">:</span></dt>
+<dd class="field-even"><p>User</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of contacts.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>List[ContactResponse]</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.routes.contacts.search_contacts">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.routes.contacts.</span></span><span class="sig-name descname"><span class="pre">search_contacts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Query(PydanticUndefined)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_current_user)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.routes.contacts.search_contacts" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Search contacts by name, last name, or email with specified pagination parameters.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param q<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The search query.</p>
+</dd>
+<dt class="field-even">type q<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">param skip<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The number of contacts to skip.</p>
+</dd>
+<dt class="field-even">type skip<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">param limit<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The maximum number of contacts to return.</p>
+</dd>
+<dt class="field-even">type limit<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">param db<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The database session.</p>
+</dd>
+<dt class="field-even">type db<span class="colon">:</span></dt>
+<dd class="field-even"><p>Session</p>
+</dd>
+<dt class="field-odd">param current_user<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current user.</p>
+</dd>
+<dt class="field-even">type current_user<span class="colon">:</span></dt>
+<dd class="field-even"><p>User</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of contacts matching the search query.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>List[ContactResponse]</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.routes.contacts.upcoming_birthdays">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.routes.contacts.</span></span><span class="sig-name descname"><span class="pre">upcoming_birthdays</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_current_user)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.routes.contacts.upcoming_birthdays" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Retrieve a list of upcoming birthdays for the current user.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param db<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The database session.</p>
+</dd>
+<dt class="field-even">type db<span class="colon">:</span></dt>
+<dd class="field-even"><p>Session</p>
+</dd>
+<dt class="field-odd">param current_user<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current user.</p>
+</dd>
+<dt class="field-even">type current_user<span class="colon">:</span></dt>
+<dd class="field-even"><p>User</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of contacts with upcoming birthdays.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>List[ContactResponse]</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.routes.contacts.update_contact">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.routes.contacts.</span></span><span class="sig-name descname"><span class="pre">update_contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contact_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">updated_contact</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ContactRequest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_current_user)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.routes.contacts.update_contact" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Update a contact by its ID.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param contact_id<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The ID of the contact to update.</p>
+</dd>
+<dt class="field-even">type contact_id<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">param updated_contact<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The updated contact data.</p>
+</dd>
+<dt class="field-even">type updated_contact<span class="colon">:</span></dt>
+<dd class="field-even"><p>ContactRequest</p>
+</dd>
+<dt class="field-odd">param db<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The database session.</p>
+</dd>
+<dt class="field-even">type db<span class="colon">:</span></dt>
+<dd class="field-even"><p>Session</p>
+</dd>
+<dt class="field-odd">param current_user<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current user.</p>
+</dd>
+<dt class="field-even">type current_user<span class="colon">:</span></dt>
+<dd class="field-even"><p>User</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The updated contact.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>ContactResponse</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-src.routes.users">
+<span id="rest-api-s-routes-users"></span><h1>Rest API’s routes Users<a class="headerlink" href="#module-src.routes.users" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.routes.users.get_current_user">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.routes.users.</span></span><span class="sig-name descname"><span class="pre">get_current_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_current_user)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.routes.users.get_current_user" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Retrieve the current user’s profile.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param current_user<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current user.</p>
+</dd>
+<dt class="field-even">type current_user<span class="colon">:</span></dt>
+<dd class="field-even"><p>User</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current user’s profile.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>UserDb</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.routes.users.send_password_reset_email">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.routes.users.</span></span><span class="sig-name descname"><span class="pre">send_password_reset_email</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">background_tasks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BackgroundTasks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_current_user)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.routes.users.send_password_reset_email" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Update the current user’s avatar.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param request<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Request.</p>
+</dd>
+<dt class="field-even">type request<span class="colon">:</span></dt>
+<dd class="field-even"><p>Request</p>
+</dd>
+<dt class="field-odd">param background_tasks<span class="colon">:</span></dt>
+<dd class="field-odd"><p>BackgroundTasks service.</p>
+</dd>
+<dt class="field-even">type background_tasks<span class="colon">:</span></dt>
+<dd class="field-even"><p>BackgroundTasks</p>
+</dd>
+<dt class="field-odd">param current_user<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Current user from DB.</p>
+</dd>
+<dt class="field-even">type current_user<span class="colon">:</span></dt>
+<dd class="field-even"><p>User</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The updated user profile.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>UserDb</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.routes.users.update_user_avatar">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.routes.users.</span></span><span class="sig-name descname"><span class="pre">update_user_avatar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">UploadFile</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">File(PydanticUndefined)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_current_user)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.routes.users.update_user_avatar" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Update the current user’s avatar.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param file<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The uploaded image file.</p>
+</dd>
+<dt class="field-even">type file<span class="colon">:</span></dt>
+<dd class="field-even"><p>UploadFile</p>
+</dd>
+<dt class="field-odd">param current_user<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current user.</p>
+</dd>
+<dt class="field-even">type current_user<span class="colon">:</span></dt>
+<dd class="field-even"><p>User</p>
+</dd>
+<dt class="field-odd">param db<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The database session.</p>
+</dd>
+<dt class="field-even">type db<span class="colon">:</span></dt>
+<dd class="field-even"><p>Session</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The updated user profile.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>UserDb</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-src.routes.auth">
+<span id="rest-api-s-routes-auth"></span><h1>Rest API’s routes Auth<a class="headerlink" href="#module-src.routes.auth" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.routes.auth.confirmed_email">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.routes.auth.</span></span><span class="sig-name descname"><span class="pre">confirmed_email</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.routes.auth.confirmed_email" title="Link to this definition">¶</a></dt>
+<dd><p>Docstring for confirmed_email function</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.routes.auth.login">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.routes.auth.</span></span><span class="sig-name descname"><span class="pre">login</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">OAuth2PasswordRequestForm</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(OAuth2PasswordRequestForm)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.routes.auth.login" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Log in a user and generate an access token and a refresh token.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param body<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The login credentials.</p>
+</dd>
+<dt class="field-even">type body<span class="colon">:</span></dt>
+<dd class="field-even"><p>OAuth2PasswordRequestForm</p>
+</dd>
+<dt class="field-odd">param db<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The database session.</p>
+</dd>
+<dt class="field-even">type db<span class="colon">:</span></dt>
+<dd class="field-even"><p>Session</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The access token and refresh token.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.routes.auth.refresh_token">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.routes.auth.</span></span><span class="sig-name descname"><span class="pre">refresh_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">credentials</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">HTTPAuthorizationCredentials</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Security(HTTPBearer)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.routes.auth.refresh_token" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Refresh an access token using a refresh token.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param credentials<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The authorization credentials.</p>
+</dd>
+<dt class="field-even">type credentials<span class="colon">:</span></dt>
+<dd class="field-even"><p>HTTPAuthorizationCredentials</p>
+</dd>
+<dt class="field-odd">param db<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The database session.</p>
+</dd>
+<dt class="field-even">type db<span class="colon">:</span></dt>
+<dd class="field-even"><p>Session</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The new access token and refresh token.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.routes.auth.request_email">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.routes.auth.</span></span><span class="sig-name descname"><span class="pre">request_email</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">RequestEmail</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">background_tasks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BackgroundTasks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.routes.auth.request_email" title="Link to this definition">¶</a></dt>
+<dd><p>Docstring for request_email function</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.routes.auth.signup">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.routes.auth.</span></span><span class="sig-name descname"><span class="pre">signup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">UserModel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">background_tasks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BackgroundTasks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.routes.auth.signup" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Sign up a new user.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param body<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The user data to sign up.</p>
+</dd>
+<dt class="field-even">type body<span class="colon">:</span></dt>
+<dd class="field-even"><p>UserModel</p>
+</dd>
+<dt class="field-odd">param db<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The database session.</p>
+</dd>
+<dt class="field-even">type db<span class="colon">:</span></dt>
+<dd class="field-even"><p>Session</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The newly created user and a success message.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-src.services.auth">
+<span id="rest-api-s-services-auth"></span><h1>Rest API’s services Auth<a class="headerlink" href="#module-src.services.auth" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.services.auth.Auth">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.services.auth.</span></span><span class="sig-name descname"><span class="pre">Auth</span></span><a class="headerlink" href="#src.services.auth.Auth" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.services.auth.Auth.ALGORITHM">
+<span class="sig-name descname"><span class="pre">ALGORITHM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ALGORITHM'</span></em><a class="headerlink" href="#src.services.auth.Auth.ALGORITHM" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.services.auth.Auth.SECRET_KEY">
+<span class="sig-name descname"><span class="pre">SECRET_KEY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SECRET_KEY'</span></em><a class="headerlink" href="#src.services.auth.Auth.SECRET_KEY" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.services.auth.Auth.create_access_token">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create_access_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expires_delta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.services.auth.Auth.create_access_token" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Create an access token</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param data<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The data to include in the token payload.</p>
+</dd>
+<dt class="field-even">type data<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+<dt class="field-odd">param expires_delta<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The token expiration time in seconds.</p>
+</dd>
+<dt class="field-even">type expires_delta<span class="colon">:</span></dt>
+<dd class="field-even"><p>Optional[float]</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The encoded access token.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.services.auth.Auth.create_email_token">
+<span class="sig-name descname"><span class="pre">create_email_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.services.auth.Auth.create_email_token" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Create an email verification token</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param data<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The data to include in the token payload.</p>
+</dd>
+<dt class="field-even">type data<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The encoded email verification token.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.services.auth.Auth.create_refresh_token">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create_refresh_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expires_delta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.services.auth.Auth.create_refresh_token" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Create a refresh token</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param data<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The data to include in the token payload.</p>
+</dd>
+<dt class="field-even">type data<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+<dt class="field-odd">param expires_delta<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The token expiration time in seconds.</p>
+</dd>
+<dt class="field-even">type expires_delta<span class="colon">:</span></dt>
+<dd class="field-even"><p>Optional[float]</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The encoded refresh token.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.services.auth.Auth.decode_refresh_token">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">decode_refresh_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">refresh_token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.services.auth.Auth.decode_refresh_token" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Decode and validate a refresh token</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param refresh_token<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The refresh token to decode.</p>
+</dd>
+<dt class="field-even">type refresh_token<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The email associated with the token.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.services.auth.Auth.generate_password_reset_link">
+<span class="sig-name descname"><span class="pre">generate_password_reset_link</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minutes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#src.services.auth.Auth.generate_password_reset_link" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Get the password reset link</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param email<span class="colon">:</span></dt>
+<dd class="field-odd"><p>User email.</p>
+</dd>
+<dt class="field-even">type email<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">param minutes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Time to link expires.</p>
+</dd>
+<dt class="field-even">type minutes<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Password reset link.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>str | None</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.services.auth.Auth.get_current_user">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_current_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(OAuth2PasswordBearer)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.services.auth.Auth.get_current_user" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Get the current user based on the access token</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param token<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The access token to decode.</p>
+</dd>
+<dt class="field-even">type token<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">param db<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The database session.</p>
+</dd>
+<dt class="field-even">type db<span class="colon">:</span></dt>
+<dd class="field-even"><p>Session</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current user.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>str | bytes | None</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.services.auth.Auth.get_email_from_token">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_email_from_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.services.auth.Auth.get_email_from_token" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Get the email associated with an email verification token</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param token<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The email verification token to decode.</p>
+</dd>
+<dt class="field-even">type token<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The email address.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.services.auth.Auth.get_password_hash">
+<span class="sig-name descname"><span class="pre">get_password_hash</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.services.auth.Auth.get_password_hash" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Generate a password hash for a given plaintext password</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param password<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The plaintext password.</p>
+</dd>
+<dt class="field-even">return<span class="colon">:</span></dt>
+<dd class="field-even"><p>The hashed password.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.services.auth.Auth.oauth2_scheme">
+<span class="sig-name descname"><span class="pre">oauth2_scheme</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;fastapi.security.oauth2.OAuth2PasswordBearer</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#src.services.auth.Auth.oauth2_scheme" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.services.auth.Auth.pwd_context">
+<span class="sig-name descname"><span class="pre">pwd_context</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;CryptContext&gt;</span></em><a class="headerlink" href="#src.services.auth.Auth.pwd_context" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.services.auth.Auth.r">
+<span class="sig-name descname"><span class="pre">r</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Redis&lt;ConnectionPool&lt;Connection&lt;host=REDIS_HOST,port=0,db=0&gt;&gt;&gt;</span></em><a class="headerlink" href="#src.services.auth.Auth.r" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.services.auth.Auth.verify_password">
+<span class="sig-name descname"><span class="pre">verify_password</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plain_password</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hashed_password</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.services.auth.Auth.verify_password" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Verify a plaintext password against a hashed password</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param plain_password<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The plaintext password.</p>
+</dd>
+<dt class="field-even">param hashed_password<span class="colon">:</span></dt>
+<dd class="field-even"><p>The hashed password.</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if the passwords match, False otherwise.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-src.services.email">
+<span id="rest-api-s-services-email"></span><h1>Rest API’s services Email<a class="headerlink" href="#module-src.services.email" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.services.email.send_confirm_email">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.services.email.</span></span><span class="sig-name descname"><span class="pre">send_confirm_email</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">EmailStr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">host</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.services.email.send_confirm_email" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Send a confirmation email for email verification.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param email<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The recipient’s email address.</p>
+</dd>
+<dt class="field-even">type email<span class="colon">:</span></dt>
+<dd class="field-even"><p>EmailStr</p>
+</dd>
+<dt class="field-odd">param username<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The recipient’s username.</p>
+</dd>
+<dt class="field-even">type username<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">param host<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The host URL for generating email confirmation links.</p>
+</dd>
+<dt class="field-even">type host<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.services.email.send_reset_email">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.services.email.</span></span><span class="sig-name descname"><span class="pre">send_reset_email</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">EmailStr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">host</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password_reset_link</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.services.email.send_reset_email" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Send a password reset email.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param email<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The recipient’s email address.</p>
+</dd>
+<dt class="field-even">type email<span class="colon">:</span></dt>
+<dd class="field-even"><p>EmailStr</p>
+</dd>
+<dt class="field-odd">param username<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The recipient’s username.</p>
+</dd>
+<dt class="field-even">type username<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">param host<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The host URL for generating password reset links.</p>
+</dd>
+<dt class="field-even">type host<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link to this heading">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="#">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Welcome to Rest API’s documentation!</a></li>
+<li><a class="reference internal" href="#module-main">Rest API’s main</a></li>
+<li><a class="reference internal" href="#module-src.repository.contacts">Rest API’s repository Contacts</a><ul>
+<li><a class="reference internal" href="#src.repository.contacts.create_contact"><code class="docutils literal notranslate"><span class="pre">create_contact()</span></code></a></li>
+<li><a class="reference internal" href="#src.repository.contacts.delete_contact"><code class="docutils literal notranslate"><span class="pre">delete_contact()</span></code></a></li>
+<li><a class="reference internal" href="#src.repository.contacts.get_contact"><code class="docutils literal notranslate"><span class="pre">get_contact()</span></code></a></li>
+<li><a class="reference internal" href="#src.repository.contacts.get_contacts"><code class="docutils literal notranslate"><span class="pre">get_contacts()</span></code></a></li>
+<li><a class="reference internal" href="#src.repository.contacts.search_contacts"><code class="docutils literal notranslate"><span class="pre">search_contacts()</span></code></a></li>
+<li><a class="reference internal" href="#src.repository.contacts.upcoming_birthdays"><code class="docutils literal notranslate"><span class="pre">upcoming_birthdays()</span></code></a></li>
+<li><a class="reference internal" href="#src.repository.contacts.update_contact"><code class="docutils literal notranslate"><span class="pre">update_contact()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-src.repository.users">Rest API’s repository Users</a><ul>
+<li><a class="reference internal" href="#src.repository.users.confirmed_email"><code class="docutils literal notranslate"><span class="pre">confirmed_email()</span></code></a></li>
+<li><a class="reference internal" href="#src.repository.users.create_user"><code class="docutils literal notranslate"><span class="pre">create_user()</span></code></a></li>
+<li><a class="reference internal" href="#src.repository.users.get_user_by_email"><code class="docutils literal notranslate"><span class="pre">get_user_by_email()</span></code></a></li>
+<li><a class="reference internal" href="#src.repository.users.set_new_password"><code class="docutils literal notranslate"><span class="pre">set_new_password()</span></code></a></li>
+<li><a class="reference internal" href="#src.repository.users.update_avatar"><code class="docutils literal notranslate"><span class="pre">update_avatar()</span></code></a></li>
+<li><a class="reference internal" href="#src.repository.users.update_token"><code class="docutils literal notranslate"><span class="pre">update_token()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-src.routes.contacts">Rest API’s routes Contacts</a><ul>
+<li><a class="reference internal" href="#src.routes.contacts.create_contact"><code class="docutils literal notranslate"><span class="pre">create_contact()</span></code></a></li>
+<li><a class="reference internal" href="#src.routes.contacts.delete_contact"><code class="docutils literal notranslate"><span class="pre">delete_contact()</span></code></a></li>
+<li><a class="reference internal" href="#src.routes.contacts.get_contact"><code class="docutils literal notranslate"><span class="pre">get_contact()</span></code></a></li>
+<li><a class="reference internal" href="#src.routes.contacts.get_contacts"><code class="docutils literal notranslate"><span class="pre">get_contacts()</span></code></a></li>
+<li><a class="reference internal" href="#src.routes.contacts.search_contacts"><code class="docutils literal notranslate"><span class="pre">search_contacts()</span></code></a></li>
+<li><a class="reference internal" href="#src.routes.contacts.upcoming_birthdays"><code class="docutils literal notranslate"><span class="pre">upcoming_birthdays()</span></code></a></li>
+<li><a class="reference internal" href="#src.routes.contacts.update_contact"><code class="docutils literal notranslate"><span class="pre">update_contact()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-src.routes.users">Rest API’s routes Users</a><ul>
+<li><a class="reference internal" href="#src.routes.users.get_current_user"><code class="docutils literal notranslate"><span class="pre">get_current_user()</span></code></a></li>
+<li><a class="reference internal" href="#src.routes.users.send_password_reset_email"><code class="docutils literal notranslate"><span class="pre">send_password_reset_email()</span></code></a></li>
+<li><a class="reference internal" href="#src.routes.users.update_user_avatar"><code class="docutils literal notranslate"><span class="pre">update_user_avatar()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-src.routes.auth">Rest API’s routes Auth</a><ul>
+<li><a class="reference internal" href="#src.routes.auth.confirmed_email"><code class="docutils literal notranslate"><span class="pre">confirmed_email()</span></code></a></li>
+<li><a class="reference internal" href="#src.routes.auth.login"><code class="docutils literal notranslate"><span class="pre">login()</span></code></a></li>
+<li><a class="reference internal" href="#src.routes.auth.refresh_token"><code class="docutils literal notranslate"><span class="pre">refresh_token()</span></code></a></li>
+<li><a class="reference internal" href="#src.routes.auth.request_email"><code class="docutils literal notranslate"><span class="pre">request_email()</span></code></a></li>
+<li><a class="reference internal" href="#src.routes.auth.signup"><code class="docutils literal notranslate"><span class="pre">signup()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-src.services.auth">Rest API’s services Auth</a><ul>
+<li><a class="reference internal" href="#src.services.auth.Auth"><code class="docutils literal notranslate"><span class="pre">Auth</span></code></a><ul>
+<li><a class="reference internal" href="#src.services.auth.Auth.ALGORITHM"><code class="docutils literal notranslate"><span class="pre">Auth.ALGORITHM</span></code></a></li>
+<li><a class="reference internal" href="#src.services.auth.Auth.SECRET_KEY"><code class="docutils literal notranslate"><span class="pre">Auth.SECRET_KEY</span></code></a></li>
+<li><a class="reference internal" href="#src.services.auth.Auth.create_access_token"><code class="docutils literal notranslate"><span class="pre">Auth.create_access_token()</span></code></a></li>
+<li><a class="reference internal" href="#src.services.auth.Auth.create_email_token"><code class="docutils literal notranslate"><span class="pre">Auth.create_email_token()</span></code></a></li>
+<li><a class="reference internal" href="#src.services.auth.Auth.create_refresh_token"><code class="docutils literal notranslate"><span class="pre">Auth.create_refresh_token()</span></code></a></li>
+<li><a class="reference internal" href="#src.services.auth.Auth.decode_refresh_token"><code class="docutils literal notranslate"><span class="pre">Auth.decode_refresh_token()</span></code></a></li>
+<li><a class="reference internal" href="#src.services.auth.Auth.generate_password_reset_link"><code class="docutils literal notranslate"><span class="pre">Auth.generate_password_reset_link()</span></code></a></li>
+<li><a class="reference internal" href="#src.services.auth.Auth.get_current_user"><code class="docutils literal notranslate"><span class="pre">Auth.get_current_user()</span></code></a></li>
+<li><a class="reference internal" href="#src.services.auth.Auth.get_email_from_token"><code class="docutils literal notranslate"><span class="pre">Auth.get_email_from_token()</span></code></a></li>
+<li><a class="reference internal" href="#src.services.auth.Auth.get_password_hash"><code class="docutils literal notranslate"><span class="pre">Auth.get_password_hash()</span></code></a></li>
+<li><a class="reference internal" href="#src.services.auth.Auth.oauth2_scheme"><code class="docutils literal notranslate"><span class="pre">Auth.oauth2_scheme</span></code></a></li>
+<li><a class="reference internal" href="#src.services.auth.Auth.pwd_context"><code class="docutils literal notranslate"><span class="pre">Auth.pwd_context</span></code></a></li>
+<li><a class="reference internal" href="#src.services.auth.Auth.r"><code class="docutils literal notranslate"><span class="pre">Auth.r</span></code></a></li>
+<li><a class="reference internal" href="#src.services.auth.Auth.verify_password"><code class="docutils literal notranslate"><span class="pre">Auth.verify_password()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-src.services.email">Rest API’s services Email</a><ul>
+<li><a class="reference internal" href="#src.services.email.send_confirm_email"><code class="docutils literal notranslate"><span class="pre">send_confirm_email()</span></code></a></li>
+<li><a class="reference internal" href="#src.services.email.send_reset_email"><code class="docutils literal notranslate"><span class="pre">send_reset_email()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">Rest API&#39;s  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Welcome to Rest API’s documentation!</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2023, Yaroslav Melnychuk.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>
